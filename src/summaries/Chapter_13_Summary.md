@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 13 Summary
+---
+
 # Chapter 13 Summary: Sequence of Exercises & General Review of Discipline
 
 ## Progression in Learning Materials

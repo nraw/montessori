@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 08 Summary
+---
+
 # Chapter 8 Summary: Refection—The Child's Diet
 
 ## Scientific Approach to Child Nutrition

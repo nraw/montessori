@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 03 Summary
+---
+
 # Chapter 3 Summary: Inaugural Address for the Children's Houses
 
 ## The Context: San Lorenzo Quarter's Poverty

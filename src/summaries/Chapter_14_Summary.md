@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 14 Summary
+---
+
 # Chapter 14 Summary: Conclusion - The Return to Nature
 
 ## The Ultimate Purpose of Education

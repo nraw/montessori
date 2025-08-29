@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 01 Summary
+---
+
 # Chapter 1 Summary: A Critical Consideration of the New Pedagogy
 
 ## Core Thesis

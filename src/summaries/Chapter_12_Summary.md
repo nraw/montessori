@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 12 Summary
+---
+
 # Chapter 12 Summary: Language in Childhood & Teaching of Numeration
 
 ## The Relationship Between Spoken and Written Language

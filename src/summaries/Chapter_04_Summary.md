@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 04 Summary
+---
+
 # Chapter 4 Summary: Pedagogical Methods & Discipline in the Children's Houses
 
 ## Scientific Foundation of Child Study

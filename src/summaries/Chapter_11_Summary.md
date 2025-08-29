@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 11 Summary
+---
+
 # Chapter 11 Summary: Manual Labour—the Potter's Art and Building
 
 ## Distinction from Manual Gymnastics

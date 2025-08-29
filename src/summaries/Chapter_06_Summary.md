@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 06 Summary
+---
+
 # Chapter 6 Summary: How the Lessons Should be Given
 
 ## Fundamental Approach: The Lesson as Experiment

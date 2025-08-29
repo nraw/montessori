@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 10 Summary
+---
+
 # Chapter 10 Summary: Nature in Education—Agricultural Labour: Culture of Plants and Animals
 
 ## The Wild Boy of Aveyron - Lessons from Itard

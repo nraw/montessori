@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 07 Summary
+---
+
 # Chapter 7 Summary: Exercises of Practical Life
 
 ## The Daily Schedule Philosophy

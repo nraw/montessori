@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Master Summary
+---
+
 # The Montessori Method: Master Summary
 
 ## Core Revolutionary Principles

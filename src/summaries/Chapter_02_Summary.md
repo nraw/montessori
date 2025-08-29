@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 02 Summary
+---
+
 # Chapter 2 Summary: History of Methods
 
 ## Core Method Requirements

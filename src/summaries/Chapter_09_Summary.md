@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 09 Summary
+---
+
 # Chapter 9 Summary: Muscular Education—Gymnastics
 
 ## Critique of Traditional Gymnastics

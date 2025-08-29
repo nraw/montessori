@@ -1,3 +1,8 @@
+---
+layout: chapter.njk
+title: Chapter 05 Summary
+---
+
 # Chapter 5 Summary: Discipline
 
 ## The Nature of True Discipline

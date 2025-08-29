@@ -1,0 +1,130 @@
+---
+layout: base.njk
+title: Chapter Summaries
+---
+
+<div class="hero-section">
+    <h1>The Montessori Method: Revolutionary Educational Philosophy</h1>
+    <p>Explore Maria Montessori's groundbreaking approach to education through detailed chapter summaries, featuring key concepts and powerful quotes that transformed how we understand child development and learning.</p>
+</div>
+
+<div class="chapter-grid">
+    {% for summary in collections.summaries %}
+        {% if summary.fileSlug == 'Master_Summary' %}
+        <div class="chapter-card featured">
+            <h3>📖 {{ summary.fileSlug | chapterTitle }}</h3>
+            <p>A comprehensive overview synthesizing all key concepts from The Montessori Method - revolutionary principles, practical implementation, and the ultimate vision for human liberation through education.</p>
+            <a href="{{ summary.url }}">Read Complete Overview →</a>
+        </div>
+        {% endif %}
+    {% endfor %}
+    
+    {% for summary in collections.summaries %}
+        {% if summary.fileSlug != 'Master_Summary' %}
+        <div class="chapter-card">
+            <h3>Chapter {{ summary.fileSlug | chapterNumber }}: {{ summary.fileSlug | chapterTitle }}</h3>
+            <p>
+                {% if summary.fileSlug | chapterNumber == 1 %}
+                    A critical examination of traditional pedagogy and the call for true scientific education based on liberty rather than coercion.
+                {% elif summary.fileSlug | chapterNumber == 2 %}
+                    Montessori's personal journey from medical work to founding the Children's Houses, building on the work of Itard and Séguin.
+                {% elif summary.fileSlug | chapterNumber == 3 %}
+                    The inaugural address revealing the social context and revolutionary vision of the Children's Houses as centers of community transformation.
+                {% elif summary.fileSlug | chapterNumber == 4 %}
+                    The scientific approach to child study, discipline through liberty, and the teacher's role as observer rather than controller.
+                {% elif summary.fileSlug | chapterNumber == 5 %}
+                    Deep exploration of discipline emerging from freedom, independence as foundation, and the biological concept of liberty in pedagogy.
+                {% elif summary.fileSlug | chapterNumber == 6 %}
+                    The art of simple, objective teaching - lessons as experiments with brevity, simplicity, and truth as core principles.
+                {% elif summary.fileSlug | chapterNumber == 7 %}
+                    Daily routines of practical life: cleanliness, order, poise, and conversation as foundations for social development.
+                {% elif summary.fileSlug | chapterNumber == 8 %}
+                    Scientific approach to child nutrition, proper foods, meal timing, and diet's role in healthy development.
+                {% elif summary.fileSlug | chapterNumber == 9 %}
+                    Muscular education designed for child anatomy, natural movement, and practical gymnasium equipment supporting development.
+                {% elif summary.fileSlug | chapterNumber == 10 %}
+                    Agriculture and nature contact for spiritual development, following the five stages from observation to human evolution.
+                {% elif summary.fileSlug | chapterNumber == 11 %}
+                    Potter's art and building as manual labor connecting children to humanity's creative and civilizational development.
+                {% elif summary.fileSlug | chapterNumber == 12 %}
+                    Sensory education as intelligence foundation, auto-education through materials, and the explosion into language and mathematics.
+                {% elif summary.fileSlug | chapterNumber == 13 %}
+                    Sequence of exercises, developmental stages, and the systematic progression from concrete to abstract learning.
+                {% elif summary.fileSlug | chapterNumber == 14 %}
+                    Conclusion emphasizing return to nature, liberation of human spirit, and education as the path to human regeneration.
+                {% else %}
+                    Explore the key concepts and revolutionary insights from this chapter of Montessori's groundbreaking educational philosophy.
+                {% endif %}
+            </p>
+            <a href="{{ summary.url }}">Read Chapter Summary →</a>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<style>
+.hero-section {
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #F5F5DC 0%, #FFF8DC 100%);
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+}
+
+.hero-section h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.featured {
+    background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%);
+    color: white;
+    grid-column: 1 / -1;
+}
+
+.featured h3 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.featured p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+}
+
+.featured a {
+    color: white;
+    background: rgba(255,255,255,0.2);
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 1rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.3s;
+}
+
+.featured a:hover {
+    background: rgba(255,255,255,0.3);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .featured {
+        grid-column: 1;
+    }
+}
+</style>

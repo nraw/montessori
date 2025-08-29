@@ -18,10 +18,10 @@
         <div class="container">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/summaries/Master_Summary/">Master Summary</a></li>
+                <li><a href="/summaries/Master_Summary/">{{ 'Master_Summary' | navTitle }}</a></li>
                 {% for summary in collections.summaries %}
                     {% if summary.fileSlug != 'Master_Summary' %}
-                    <li><a href="{{ summary.url }}">Ch. {{ summary.fileSlug | chapterNumber }}</a></li>
+                    <li><a href="{{ summary.url }}" title="{{ summary.fileSlug | chapterTitle }}">{{ summary.fileSlug | navTitle }}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
