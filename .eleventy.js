@@ -70,6 +70,19 @@ module.exports = function(eleventyConfig) {
     return navTitles[fileSlug] || fileSlug.replace(/Chapter_\d+_/, '').replace(/_/g, ' ');
   });
 
+  // Add filters to find next and previous chapters
+  eleventyConfig.addFilter("getNextChapter", function(currentPage, collections) {
+    const summaries = collections.summaries.filter(item => item.fileSlug !== 'Master_Summary');
+    const currentIndex = summaries.findIndex(item => item.url === currentPage.url);
+    return currentIndex < summaries.length - 1 ? summaries[currentIndex + 1] : null;
+  });
+
+  eleventyConfig.addFilter("getPrevChapter", function(currentPage, collections) {
+    const summaries = collections.summaries.filter(item => item.fileSlug !== 'Master_Summary');
+    const currentIndex = summaries.findIndex(item => item.url === currentPage.url);
+    return currentIndex > 0 ? summaries[currentIndex - 1] : null;
+  });
+
   return {
     dir: {
       input: "src",

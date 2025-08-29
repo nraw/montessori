@@ -9,3 +9,29 @@ layout: base.njk
 <div class="chapter-content">
     {{ content | safe }}
 </div>
+
+{%- set prevChapter = page | getPrevChapter(collections) -%}
+{%- set nextChapter = page | getNextChapter(collections) -%}
+{% if prevChapter or nextChapter %}
+<div class="chapter-navigation">
+    <div class="nav-container">
+        {% if prevChapter %}
+        <div class="nav-prev">
+            <a href="{{ prevChapter.url | url }}">
+                <span class="nav-label">← Previous Chapter</span>
+                <span class="nav-title">{{ prevChapter.fileSlug | chapterNumber }}: {{ prevChapter.fileSlug | chapterTitle }}</span>
+            </a>
+        </div>
+        {% endif %}
+        
+        {% if nextChapter %}
+        <div class="nav-next">
+            <a href="{{ nextChapter.url | url }}">
+                <span class="nav-label">Next Chapter →</span>
+                <span class="nav-title">{{ nextChapter.fileSlug | chapterNumber }}: {{ nextChapter.fileSlug | chapterTitle }}</span>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
