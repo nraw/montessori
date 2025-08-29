@@ -51,6 +51,32 @@ npm run build
 
 The site will be available at `http://localhost:8080`
 
+## GitHub Pages Deployment
+
+This repository is configured with GitHub Actions to automatically deploy to GitHub Pages:
+
+1. **Automatic Deployment**: Pushes to `main` or `master` branch trigger automatic deployment
+2. **Manual Deployment**: Can be triggered manually from the GitHub Actions tab
+3. **Live Site**: Once deployed, your site will be available at `https://[username].github.io/[repository-name]`
+
+### Setup Instructions:
+
+1. Push your code to GitHub:
+   ```bash
+   git add .
+   git commit -m "Initial commit with Montessori summaries site"
+   git push origin main
+   ```
+
+2. Enable GitHub Pages in your repository:
+   - Go to Settings → Pages
+   - Select "GitHub Actions" as the source
+   - The site will build and deploy automatically
+
+3. Wait for the deployment to complete (check the Actions tab)
+
+4. Your site will be live at the GitHub Pages URL!
+
 ## Project Structure
 
 ```
