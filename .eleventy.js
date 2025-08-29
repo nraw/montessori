@@ -2,6 +2,13 @@ module.exports = function(eleventyConfig) {
   // Copy static files
   eleventyConfig.addPassthroughCopy("src/css");
   
+  // Set path prefix for GitHub Pages if needed
+  let pathPrefix = "";
+  if (process.env.GITHUB_REPOSITORY) {
+    const repoName = process.env.GITHUB_REPOSITORY.split('/')[1];
+    pathPrefix = `/${repoName}/`;
+  }
+  
   // Add a collection for summaries
   eleventyConfig.addCollection("summaries", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/summaries/*.md")
@@ -71,6 +78,7 @@ module.exports = function(eleventyConfig) {
       layouts: "_layouts"
     },
     markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk"
+    htmlTemplateEngine: "njk",
+    pathPrefix: pathPrefix
   };
 };

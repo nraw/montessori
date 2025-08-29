@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} - {% endif %}The Montessori Method</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 </head>
 <body>
     <header>
@@ -17,11 +17,11 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/summaries/Master_Summary/">{{ 'Master_Summary' | navTitle }}</a></li>
+                <li><a href="{{ '/' | url }}">Home</a></li>
+                <li><a href="{{ '/summaries/Master_Summary/' | url }}">{{ 'Master_Summary' | navTitle }}</a></li>
                 {% for summary in collections.summaries %}
                     {% if summary.fileSlug != 'Master_Summary' %}
-                    <li><a href="{{ summary.url }}" title="{{ summary.fileSlug | chapterTitle }}">{{ summary.fileSlug | navTitle }}</a></li>
+                    <li><a href="{{ summary.url | url }}" title="{{ summary.fileSlug | chapterTitle }}">{{ summary.fileSlug | navTitle }}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

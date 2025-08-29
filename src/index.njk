@@ -14,7 +14,7 @@ title: Chapter Summaries
         <div class="chapter-card featured">
             <h3>📖 {{ summary.fileSlug | chapterTitle }}</h3>
             <p>A comprehensive overview synthesizing all key concepts from The Montessori Method - revolutionary principles, practical implementation, and the ultimate vision for human liberation through education.</p>
-            <a href="{{ summary.url }}">Read Complete Overview →</a>
+            <a href="{{ summary.url | url }}">Read Complete Overview →</a>
         </div>
         {% endif %}
     {% endfor %}
@@ -56,7 +56,7 @@ title: Chapter Summaries
                     Explore the key concepts and revolutionary insights from this chapter of Montessori's groundbreaking educational philosophy.
                 {% endif %}
             </p>
-            <a href="{{ summary.url }}">Read Chapter Summary →</a>
+            <a href="{{ summary.url | url }}">Read Chapter Summary →</a>
         </div>
         {% endif %}
     {% endfor %}

@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
+    "build:gh": "GITHUB_REPOSITORY=$npm_package_name/montessori eleventy",
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
