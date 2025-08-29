@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} - {% endif %}The Montessori Method</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Montessori Method</h1>
+            <p>Chapter Summaries & Key Insights from Maria Montessori</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/summaries/Master_Summary/">Master Summary</a></li>
+                {% for summary in collections.summaries %}
+                    {% if summary.fileSlug != 'Master_Summary' %}
+                    <li><a href="{{ summary.url }}">Ch. {{ summary.fileSlug | chapterNumber }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            {{ content | safe }}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The Montessori Method - Chapter Summaries. Original work by Maria Montessori.</p>
+            <p>Summaries created to explore revolutionary educational principles.</p>
+        </div>
+    </footer>
+</body>
+</html>
