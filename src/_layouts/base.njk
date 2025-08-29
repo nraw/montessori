@@ -14,14 +14,39 @@
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="{{ '/' | url }}">Home</a></li>
-                <li><a href="{{ '/summaries/Master_Summary/' | url }}">{{ 'Master_Summary' | navTitle }}</a></li>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" aria-label="Toggle navigation menu" onclick="toggleSidebar()">
+        <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <span class="toggle-text">Menu</span>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Chapters</h3>
+            <button class="sidebar-close" onclick="closeSidebar()" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-nav">
+                <li><a href="{{ '/' | url }}" onclick="closeSidebar()">🏠 Home</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="{{ '/summaries/Master_Summary/' | url }}" onclick="closeSidebar()" class="featured-link">📖 {{ 'Master_Summary' | chapterTitle }}</a></li>
+                <li class="nav-divider"></li>
                 {% for summary in collections.summaries %}
                     {% if summary.fileSlug != 'Master_Summary' %}
-                    <li><a href="{{ summary.url | url }}" title="{{ summary.fileSlug | chapterTitle }}">{{ summary.fileSlug | navTitle }}</a></li>
+                    <li>
+                        <a href="{{ summary.url | url }}" onclick="closeSidebar()" title="{{ summary.fileSlug | chapterTitle }}">
+                            <span class="chapter-number">{{ summary.fileSlug | chapterNumber }}</span>
+                            <span class="chapter-title">{{ summary.fileSlug | navTitle }}</span>
+                        </a>
+                    </li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -40,5 +65,44 @@
             <p>Summaries created to explore revolutionary educational principles.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const isOpen = sidebar.classList.contains('open');
+            
+            if (isOpen) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        }
+        
+        function openSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            sidebar.classList.add('open');
+            overlay.classList.add('active');
+            document.body.classList.add('sidebar-open');
+        }
+        
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.classList.remove('sidebar-open');
+        }
+        
+        // Close sidebar when clicking outside or pressing Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSidebar();
+            }
+        });
+    </script>
 </body>
 </html>

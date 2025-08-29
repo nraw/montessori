@@ -14,68 +14,158 @@
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/summaries/Master_Summary/">Overview</a></li>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" aria-label="Toggle navigation menu" onclick="toggleSidebar()">
+        <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <span class="toggle-text">Menu</span>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Chapters</h3>
+            <button class="sidebar-close" onclick="closeSidebar()" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-nav">
+                <li><a href="/" onclick="closeSidebar()">🏠 Home</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="/summaries/Master_Summary/" onclick="closeSidebar()" class="featured-link">📖 Complete Overview of The Montessori Method</a></li>
+                <li class="nav-divider"></li>
                 
                     
                 
                     
-                    <li><a href="/summaries/Chapter_01_Summary/" title="A Critical Consideration of the New Pedagogy">New Pedagogy</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_01_Summary/" onclick="closeSidebar()" title="A Critical Consideration of the New Pedagogy">
+                            <span class="chapter-number">1</span>
+                            <span class="chapter-title">New Pedagogy</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_02_Summary/" title="History of Methods">History</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_02_Summary/" onclick="closeSidebar()" title="History of Methods">
+                            <span class="chapter-number">2</span>
+                            <span class="chapter-title">History</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_03_Summary/" title="Inaugural Address for the Children&#39;s Houses">Inaugural Address</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_03_Summary/" onclick="closeSidebar()" title="Inaugural Address for the Children&#39;s Houses">
+                            <span class="chapter-number">3</span>
+                            <span class="chapter-title">Inaugural Address</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_04_Summary/" title="Pedagogical Methods &amp; Discipline in the Children&#39;s Houses">Methods</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_04_Summary/" onclick="closeSidebar()" title="Pedagogical Methods &amp; Discipline in the Children&#39;s Houses">
+                            <span class="chapter-number">4</span>
+                            <span class="chapter-title">Methods</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_05_Summary/" title="Discipline">Discipline</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_05_Summary/" onclick="closeSidebar()" title="Discipline">
+                            <span class="chapter-number">5</span>
+                            <span class="chapter-title">Discipline</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_06_Summary/" title="How the Lessons Should be Given">Lessons</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_06_Summary/" onclick="closeSidebar()" title="How the Lessons Should be Given">
+                            <span class="chapter-number">6</span>
+                            <span class="chapter-title">Lessons</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_07_Summary/" title="Exercises of Practical Life">Practical Life</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_07_Summary/" onclick="closeSidebar()" title="Exercises of Practical Life">
+                            <span class="chapter-number">7</span>
+                            <span class="chapter-title">Practical Life</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_08_Summary/" title="Refection—The Child&#39;s Diet">Child&#39;s Diet</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_08_Summary/" onclick="closeSidebar()" title="Refection—The Child&#39;s Diet">
+                            <span class="chapter-number">8</span>
+                            <span class="chapter-title">Child&#39;s Diet</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_09_Summary/" title="Muscular Education—Gymnastics">Gymnastics</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_09_Summary/" onclick="closeSidebar()" title="Muscular Education—Gymnastics">
+                            <span class="chapter-number">9</span>
+                            <span class="chapter-title">Gymnastics</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_10_Summary/" title="Nature in Education—Agricultural Labour">Nature</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_10_Summary/" onclick="closeSidebar()" title="Nature in Education—Agricultural Labour">
+                            <span class="chapter-number">10</span>
+                            <span class="chapter-title">Nature</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_11_Summary/" title="Manual Labour—the Potter&#39;s Art and Building">Manual Labor</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_11_Summary/" onclick="closeSidebar()" title="Manual Labour—the Potter&#39;s Art and Building">
+                            <span class="chapter-number">11</span>
+                            <span class="chapter-title">Manual Labor</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_12_Summary/" title="Education of the Senses">Senses</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_12_Summary/" onclick="closeSidebar()" title="Education of the Senses">
+                            <span class="chapter-number">12</span>
+                            <span class="chapter-title">Senses</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_13_Summary/" title="Sequence of Exercises">Sequence</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_13_Summary/" onclick="closeSidebar()" title="Sequence of Exercises">
+                            <span class="chapter-number">13</span>
+                            <span class="chapter-title">Sequence</span>
+                        </a>
+                    </li>
                     
                 
                     
-                    <li><a href="/summaries/Chapter_14_Summary/" title="Conclusion">Conclusion</a></li>
+                    <li>
+                        <a href="/summaries/Chapter_14_Summary/" onclick="closeSidebar()" title="Conclusion">
+                            <span class="chapter-number">14</span>
+                            <span class="chapter-title">Conclusion</span>
+                        </a>
+                    </li>
                     
                 
             </ul>
@@ -206,5 +296,44 @@
             <p>Summaries created to explore revolutionary educational principles.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const isOpen = sidebar.classList.contains('open');
+            
+            if (isOpen) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        }
+        
+        function openSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            sidebar.classList.add('open');
+            overlay.classList.add('active');
+            document.body.classList.add('sidebar-open');
+        }
+        
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.classList.remove('sidebar-open');
+        }
+        
+        // Close sidebar when clicking outside or pressing Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSidebar();
+            }
+        });
+    </script>
 </body>
 </html>
